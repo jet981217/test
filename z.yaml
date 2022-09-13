@@ -1,11 +1,11 @@
-name: Pyler Issue Template
-description: Use this template to report any issue
+name: Pyler PR Template
+description: Use this template to request any PR
 body:
   - type: dropdown
-    id: issue-type
+    id: pr-type
     attributes:
-      label: Issue Type
-      description: What type of issue would you like to report?
+      label: PR Type
+      description: What type of PR would you like to report?
       multiple: false
       options:
         - Bug
@@ -22,6 +22,7 @@ body:
     attributes:
       value: |
         Please make sure that this is a bug. As per our [GitHub Policy](https://github.com/tensorflow/tensorflow/blob/master/ISSUES.md),we only address code/doc bugs, performance issues, feature requests and build/installation issues on GitHub.
+
   - type: dropdown
     id: source
     attributes:
@@ -38,16 +39,6 @@ body:
       label: Pytorch/Tensorflow Version
       description: 
       placeholder: ex. torch 1.9.0, tf 2.8
-    validations:
-      required: true
-  - type: dropdown
-    id: Code
-    attributes:
-      label: Custom Code
-      description: 
-      options:
-        - "Yes"
-        - "No"
     validations:
       required: true
   - type: input
@@ -91,31 +82,21 @@ body:
     validations:
       required: false
   - type: textarea
-    id: Overview-feature
+    id: what_happened
     attributes:
-      label: Overview-what is the feature?
-      description: 
-      placeholder: Please summarize the feature or fix.
-      value:
+      label: Current Behaviour?
+      description: Also tell us, what did you expect to happen?
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
       render: shell
     validations:
       required: true
   - type: textarea
-    id: Overview-solution
+    id: code_to_reproduce
     attributes:
-      label: Overview-what is the solution?
-      description: 
-      placeholder: Summarize what you changed.
-      value: 
-      render: shell
-    validations:
-      required: true
-  - type: textarea
-    id: Overview-area
-    attributes:
-      label: Overview-what areas of the application does this impact?
-      description: 
-      placeholder: List impacted areas.
+      label: Standalone code to reproduce the issue
+      description: Provide a reproducible test case that is the bare minimum necessary to generate the problem. If possible, please share a link to Colab/Jupyter/any notebook.
+      placeholder: Tell us what you see!
       value: 
       render: shell
     validations:
