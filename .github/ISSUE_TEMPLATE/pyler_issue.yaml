@@ -22,7 +22,6 @@ body:
     attributes:
       value: |
         Please make sure that this is a bug. As per our [GitHub Policy](https://github.com/tensorflow/tensorflow/blob/master/ISSUES.md),we only address code/doc bugs, performance issues, feature requests and build/installation issues on GitHub.
-
   - type: dropdown
     id: source
     attributes:
@@ -107,16 +106,6 @@ body:
       label: Overview-what is the solution?
       description: 
       placeholder: Summarize what you changed.
-      value: 
-      render: shell
-    validations:
-      required: true
-  - type: textarea
-    id: Overview-area
-    attributes:
-      label: Overview-what areas of the application does this impact?
-      description: 
-      placeholder: List impacted areas.
       value: 
       render: shell
     validations:
